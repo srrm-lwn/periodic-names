@@ -1,1 +1,47 @@
-Whats this?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Find your name in the periodic table">
+    <meta name="author" content="srrm-lwn">
+
+    <title>Periodic Names</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div class="cover-container">
+            <div class="inner cover">
+                <div class="input-group">
+                    <input type="text"
+                           placeholder="Enter your name"
+                           id="name"
+                           class="form-control"
+                           autofocus
+                           maxlength="20"
+                           onkeydown="if (event.keyCode == 13) document.getElementById('go').click()"
+                           style="text-align: center;"/>
+                    <span class="input-group-btn">
+                        <button id="go" class="btn btn-info" type="submit" onclick="convert();">Go!</button>
+                    </span>
+                </div>
+            </div>
+            <div class="inner row">
+                <div id="result">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type='text/javascript' src="js/periodicnames.js"></script>
+</body>
+</html>
