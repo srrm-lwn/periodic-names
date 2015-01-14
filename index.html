@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no;user-scalable=0;">
+    <meta name="description" content="Find your name in the periodic table">
+    <meta name="author" content="srrm-lwn">
+
+    <title>Periodic Names</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="text-center">
+    <h3>Find your name in the Periodic Table of Elements!</h3>
+    <h5>
+        <small>A hack by <a href="https://twitter.com/srrm_lwn" target="_blank">@srrm_lwn</a></small>
+    </h5>
+</div>
+
+<div class="wrapper">
+    <ul class="main">
+        <li id="H" data-pos="1" data-nb="1.00">H<span>Hydrogen</span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li id="He" data-pos="52" data-nb="4.00">He<span>Helium</span></li>
+        <li id="Li" data-pos="58" data-nb="6.94">Li<span>Lithium</span></li>
+        <li id="Be" data-pos="61" data-nb="9.01">Be<span>Beryllium</span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li id="B" data-pos="94" data-nb="10.81">B<span>Boron</span></li>
+        <li id="C" data-pos="97" data-nb="12.01">C<span>Carbon</span></li>
+        <li id="N" data-pos="100" data-nb="14.00">N<span>Nitrogen</span></li>
+        <li id="O" data-pos="103" data-nb="15.99">O<span>Oxygen</span></li>
+        <li id="F" data-pos="106" data-nb="18.99">F<span>Fluorine</span></li>
+        <li id="Ne" data-pos="109" data-nb="20.17">Ne<span>Neon</span></li>
+        <li id="Na" data-pos="115" data-nb="22.98...">Na<span>Sodium</span></li>
+        <li id="Mg" data-pos="118" data-nb="24.30">Mg<span>Magnesium</span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li id="Al" data-pos="151" data-nb="26.98">Al<span>Aluminium</span></li>
+        <li id="Si" data-pos="154" data-nb="28.08">Si<span>Silicon</span></li>
+        <li id="P" data-pos="157" data-nb="30.97">P<span>Phosphorus</span></li>
+        <li id="S" data-pos="160" data-nb="32.06">S<span>Sulfur</span></li>
+        <li id="Cl" data-pos="163" data-nb="35.45">Cl<span>Chlorine</span></li>
+        <li id="Ar" data-pos="166" data-nb="39.94">Ar<span>Argon</span></li>
+        <li id="K" data-pos="172" data-nb="39.94">K<span>Potassium</span></li>
+        <li id="Ca" data-pos="175" data-nb="40.07">Ca<span>Calcium</span></li>
+        <li id="Sc" data-pos="178" data-nb="44.95">Sc<span>Scandium</span></li>
+        <li id="Ti" data-pos="181" data-nb="47.86">Ti<span>Titanium</span></li>
+        <li id="V" data-pos="184" data-nb="50.94">V<span>Vanadium</span></li>
+        <li id="Cr" data-pos="187" data-nb="51.99">Cr<span>Chromium</span></li>
+        <li id="Mn" data-pos="190" data-nb="54.93">Mn<span>Manganese</span></li>
+        <li id="Fe" data-pos="193" data-nb="55.84">Fe<span>Iron</span></li>
+        <li id="Co" data-pos="196" data-nb="58.93">Co<span>Cobalt</span></li>
+        <li id="Ni" data-pos="199" data-nb="58.69">Ni<span>Nickel</span></li>
+        <li id="Cu" data-pos="202" data-nb="63.54">Cu<span>Copper</span></li>
+        <li id="Zn" data-pos="205" data-nb="65.38">Zn<span>Zinc</span></li>
+        <li id="Ga" data-pos="208" data-nb="69.72">Ga<span>Gallium</span></li>
+        <li id="Ge" data-pos="211" data-nb="72.63">Ge<span>Germanium</span></li>
+        <li id="As" data-pos="214" data-nb="74.92">As<span>Arsenic</span></li>
+        <li id="Se" data-pos="217" data-nb="78.96">Se<span>Selenium</span></li>
+        <li id="Br" data-pos="220" data-nb="79.90">Br<span>Bromine</span></li>
+        <li id="Kr" data-pos="223" data-nb="83.79">Kr<span>Krypton</span></li>
+        <li id="Rb" data-pos="229" data-nb="85.46">Rb<span>Rubidium</span></li>
+        <li id="Sr" data-pos="232" data-nb="87.62">Sr<span>Strontium</span></li>
+        <li id="Y" data-pos="235" data-nb="88.90">Y<span>Yttrium</span></li>
+        <li id="Zr" data-pos="238" data-nb="91.22">Zr<span>Zirconium</span></li>
+        <li id="Nb" data-pos="241" data-nb="92.90">Nb<span>Niobium</span></li>
+        <li id="Mo" data-pos="244" data-nb="95.96">Mo<span>Molybdenum</span></li>
+        <li id="Tc" data-pos="247" data-nb="(98)">Tc<span>Technetium</span></li>
+        <li id="Ru" data-pos="250" data-nb="101.07">Ru<span>Ruthenium</span></li>
+        <li id="Rh" data-pos="253" data-nb="102.90">Rh<span>Rhodium</span></li>
+        <li id="Pd" data-pos="256" data-nb="106.42">Pd<span>Palladium</span></li>
+        <li id="Ag" data-pos="259" data-nb="107.86">Ag<span>Silver</span></li>
+        <li id="Cd" data-pos="262" data-nb="112.41">Cd<span>Cadmium</span></li>
+        <li id="In" data-pos="265" data-nb="114.81">In<span>Indium</span></li>
+        <li id="Sn" data-pos="268" data-nb="118.71">Sn<span>Tin</span></li>
+        <li id="Sb" data-pos="271" data-nb="121.76">Sb<span>Antimony</span></li>
+        <li id="Te" data-pos="274" data-nb="127.6">Te<span>Tellurium</span></li>
+        <li id="I" data-pos="277" data-nb="126.90">I<span>Iodine</span></li>
+        <li id="Xe" data-pos="280" data-nb="131.29">Xe<span>Xenon</span></li>
+        <li id="Cs" data-pos="286" data-nb="132.90">Cs<span>Caesium</span></li>
+        <li id="Ba" data-pos="289" data-nb="132.90">Ba<span>Barium</span></li>
+        <li class="empty">*<span></span></li>
+        <li id="Hf" data-pos="295" data-nb="178.49">Hf<span>Hafnium</span></li>
+        <li id="Ta" data-pos="298" data-nb="180.94">Ta<span>Tantalum</span></li>
+        <li id="W" data-pos="301" data-nb="183.84">W<span>Tungsten</span></li>
+        <li id="Re" data-pos="304" data-nb="186.20">Re<span>Rhenium</span></li>
+        <li id="Os" data-pos="307" data-nb="190.23">Os<span>Osmium</span></li>
+        <li id="Ir" data-pos="310" data-nb="192.21">Ir<span>Iridium</span></li>
+        <li id="Pt" data-pos="313" data-nb="195.08">Pt<span>Platinum</span></li>
+        <li id="Au" data-pos="316" data-nb="196.96">Au<span>Gold</span></li>
+        <li id="Hg" data-pos="319" data-nb="200.59">Hg<span>Mercury</span></li>
+        <li id="Tl" data-pos="322" data-nb="204.38">Tl<span>Thallium</span></li>
+        <li id="Pb" data-pos="325" data-nb="207.2">Pb<span>Lead</span></li>
+        <li id="Bi" data-pos="328" data-nb="208.98">Bi<span>Bismuth</span></li>
+        <li id="Po" data-pos="331" data-nb="(209)">Po<span>Polonium</span></li>
+        <li id="At" data-pos="334" data-nb="(210)">At<span>Astatine</span></li>
+        <li id="Rn" data-pos="337" data-nb="(222)">Rn<span>Radon</span></li>
+        <li id="Fr" data-pos="343" data-nb="(223)">Fr<span>Francium</span></li>
+        <li id="Ra" data-pos="346" data-nb="(226)">Ra<span>Radium</span></li>
+        <li class="empty">**<span></span></li>
+        <li id="Rf" data-pos="352" data-nb="(267)">Rf<span>Rutherfordium</span></li>
+        <li id="Db" data-pos="355" data-nb="(268)">Db<span>Dubnium</span></li>
+        <li id="Sg" data-pos="358" data-nb="(271)">Sg<span>Seaborgium</span></li>
+        <li id="Bh" data-pos="361" data-nb="(272)">Bh<span>Bohrium</span></li>
+        <li id="Hs" data-pos="364" data-nb="(270)">Hs<span>Hassium</span></li>
+        <li id="Mt" data-pos="367" data-nb="(276)">Mt<span>Meitnerium</span></li>
+        <li id="Ds" data-pos="370" data-nb="(281)">Ds<span>Darmstadium</span></li>
+        <li id="Rg" data-pos="373" data-nb="(280)">Rg<span>Roentgenium</span></li>
+        <li id="Cn" data-pos="376" data-nb="(285)">Cn<span>Copernicium</span></li>
+        <li id="Uut" data-pos="379" data-nb="(284)">Uut<span>Unutrium</span></li>
+        <li id="Fl" data-pos="382" data-nb="(289)">Fl<span>Flerovium</span></li>
+        <li id="Uup" data-pos="385" data-nb="(288)">Uup<span>Ununpentium</span></li>
+        <li id="Lv" data-pos="388" data-nb="(293)">Lv<span>Livermorium</span></li>
+        <li id="Uus" data-pos="391" data-nb="(294)">Uus<span>Ununseptium</span></li>
+        <li id="Uuo" data-pos="394" data-nb="(294)">Uuo<span>Ununoctium</span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty short"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty">*<span></span></li>
+        <li id="La" data-pos="403" data-nb="138.90">La<span>Lanthanum</span></li>
+        <li id="Ce" data-pos="406" data-nb="140.11">Ce<span>Cerium</span></li>
+        <li id="Pr" data-pos="409" data-nb="140.90">Pr<span>Praseodymium</span></li>
+        <li id="Nd" data-pos="412" data-nb="144.24">Nd<span>Neodymium</span></li>
+        <li id="Pm" data-pos="415" data-nb="(145)">Pm<span>Promethium</span></li>
+        <li id="Sm" data-pos="418" data-nb="150.36">Sm<span>Samarium</span></li>
+        <li id="Eu" data-pos="421" data-nb="151.96">Eu<span>Europium</span></li>
+        <li id="Gd" data-pos="424" data-nb="157.25">Gd<span>Gadolinium</span></li>
+        <li id="Tb" data-pos="427" data-nb="158.92">Tb<span>Terbium</span></li>
+        <li id="Dy" data-pos="430" data-nb="162.5">Dy<span>Dysprosium</span></li>
+        <li id="Ho" data-pos="433" data-nb="164.93">Ho<span>Holmium</span></li>
+        <li id="Er" data-pos="436" data-nb="167.25">Er<span>Erbium</span></li>
+        <li id="Tm" data-pos="439" data-nb="168.93">Tm<span>Thulium</span></li>
+        <li id="Yb" data-pos="442" data-nb="173.05">Yb<span>Ytterbium</span></li>
+        <li id="Lu" data-pos="445" data-nb="174.96">Lu<span>Lutetium</span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty"><span></span></li>
+        <li class="empty">**<span></span></li>
+        <li id="Ac" data-pos="451" data-nb="(227)">Ac<span>Actinium</span></li>
+        <li id="Th" data-pos="454" data-nb="232.03">Th<span>Thorium</span></li>
+        <li id="Pa" data-pos="457" data-nb="231.05">Pa<span>Protactinium</span></li>
+        <li id="U" data-pos="460" data-nb="238.02">U<span>Uranium</span></li>
+        <li id="Np" data-pos="463" data-nb="(237)">Np<span>Neptunium</span></li>
+        <li id="Pu" data-pos="466" data-nb="(244)">Pu<span>Plutonium</span></li>
+        <li id="Am" data-pos="469" data-nb="(243)">Am<span>Americium</span></li>
+        <li id="Cm" data-pos="472" data-nb="(247)">Cm<span>Curium</span></li>
+        <li id="Bk" data-pos="475" data-nb="(247)">Bk<span>Berkelium</span></li>
+        <li id="Cf" data-pos="478" data-nb="(251)">Cf<span>Californium</span></li>
+        <li id="Es" data-pos="481" data-nb="(252)">Es<span>Einstenium</span></li>
+        <li id="Fm" data-pos="484" data-nb="(257)">Fm<span>Fermium</span></li>
+        <li id="Md" data-pos="487" data-nb="(258)">Md<span>Mendelevium</span></li>
+        <li id="No" data-pos="490" data-nb="(259)">No<span>Nobelium</span></li>
+        <li id="Lr" data-pos="493" data-nb="(262)">Lr<span>Lawrencium</span></li>
+    </ul>
+</div>
+<div class="inner cover centered">
+    <div class="input-group">
+        <input type="text"
+               placeholder="Enter your name"
+               id="name"
+               class="form-control"
+               autofocus
+               maxlength="20"
+               autocomplete="off"
+               onkeydown="if (event.keyCode == 13) document.getElementById('go').click()"
+               style="text-align: center;"/>
+                    <span class="input-group-btn">
+                        <button id="go" class="btn btn-info" type="submit">Go!</button>
+                    </span>
+    </div>
+</div>
+<div class="centered">
+    <ul id="result" class="main result">
+    </ul>
+</div>
+<br/>
+
+<div class="centered">
+    <h5 id="result_message" class="result" style="display:none"></h5>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type='text/javascript' src="js/periodicnames.js"></script>
+<script type='text/javascript' src="js/solveAndAnimate.js"></script>
+</body>
+</html>
