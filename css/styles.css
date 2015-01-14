@@ -65,7 +65,7 @@ margin:auto;
   display:table;
 }
 
-//list style from http://cssdeck.com/labs/periodic-table
+/*list style from http://cssdeck.com/labs/periodic-table */
 .main li {
   width:35px;
   height:40px;
@@ -79,7 +79,7 @@ margin:auto;
   margin:1px;
   cursor:pointer;
   padding-top:12px;
-  overflow:scroll;
+  overflow:hidden;
   transition:all .2s ease-in;
   opacity:0.50;
 }
