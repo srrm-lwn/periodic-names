@@ -2,19 +2,27 @@
 
 * { box-sizing: border-box; padding:0; margin:0; }
 
+/*
+  background: #eee;
+  text: #337ab7;
+  elements-default: #337ab7;
+  elements-highlighted:#5cb85c;
+  elemenets-fake: #d9534f;
+*/
+
 html,
 body {
     height: 100%;
-    background-color: #333;
+    background-color: #eee;
     padding-right: 10px;
     padding-left: 10px;
-    font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    font-family:"HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,sans-serif;
 
 }
 body {
     color: #fff;
     text-align: center;
-    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    /*text-shadow: 0 1px 3px rgba(0,0,0,.5); */
 }
 
 .inner {
@@ -27,17 +35,6 @@ display:table;
 margin:auto;
 }
 
-@media screen and (max-width: 666px) {
-   .wrapper {
-     display:none;
-   }
-}
-
-@media screen and (max-height: 750px) {
-   .wrapper {
-     display:none;
-   }
-}
 
 .wrapper {
   width:666px;
@@ -46,18 +43,18 @@ margin:auto;
 }
 
 .main{
-   color:rgba(52, 152, 219, 0.75);
+   color:#fff;
    list-style-type:none;
 }
 
 .result{
-   color:rgba(52, 152, 219, 0.75);
+   color:#fff;
    list-style-type:none;
    padding-bottom: 10px;
 }
 
 .success{
-   color:rgba(46, 204, 113,1.0);
+   color:#006400;
 }
 
 .main:after{
@@ -69,9 +66,11 @@ margin:auto;
 .main li {
   width:35px;
   height:40px;
-  box-shadow: 0 0 2px rgba(52, 152, 219, 0.5);
-  border: 1px solid rgba(52, 152, 219, 0.25);
-  text-shadow:0 0px 0 rgba(52, 152, 219, 0.5);
+  /*box-shadow: 0 0 2px rgba(52, 152, 219, 0.5); */
+  border: 1px solid #337ab7;
+  background-color:#337ab7;
+
+  /*text-shadow:0 0px 0 rgba(52, 152, 219, 0.5); */
   position:relative;
   font-size:12px;
   float:left;
@@ -81,23 +80,26 @@ margin:auto;
   padding-top:12px;
   overflow:hidden;
   transition:all .2s ease-in;
-  opacity:0.50;
+  opacity:1.0;
 }
 
 .main .selected{
   opacity:1.0;
-  box-shadow: 0 0 2px rgba(46, 204, 113,1.0);
-  border: 1px solid rgba(46, 204, 113, 0.25);
-  text-shadow:0 0px 0 rgba(46, 204, 113, 0.5);
-  color:rgba(46, 204, 113,1.0);
+  /*box-shadow: 0 0 2px #006400; */
+  border: 1px solid #006400;
+  background-color:#006400;
+
+  /*text-shadow:0 0px 0 rgba(46, 204, 113, 0.5); */
+  color:#fff;
 }
 
 .result li {
     opacity:1.0;
-    box-shadow: 0 0 2px rgba(46, 204, 113,1.0);
-    border: 1px solid rgba(46, 204, 113, 0.25);
-    text-shadow:0 0px 0 rgba(46, 204, 113, 0.5);
-    color:rgba(46, 204, 113,1.0);
+    /*box-shadow: 0 0 2px #006400;   */
+    border: 1px solid #006400;
+    background-color:#006400;
+    /*text-shadow:0 0px 0 rgba(46, 204, 113, 0.5); */
+    color:#eee;
 }
 
 
@@ -108,10 +110,12 @@ margin:auto;
   padding-top:3px;
 }
 
-.main .empty, .main .short{
+.main .empty, .main .short, .main .empty:hover{
   border:none;
   box-shadow:none;
   cursor:default;
+  background-color: #eee;
+  color: #337ab7;
 }
 
 .result .empty{
@@ -139,32 +143,35 @@ margin:auto;
 }
 
 .result .fakeElement{
-  color: rgba(231, 76, 60,1.0);
-  box-shadow: 0 0 2px rgba(231, 76, 60, 0.5);
-  border: 1px solid rgba(231, 76, 60, 0.25);
-  text-shadow:0 0px 0 rgba(231, 76, 60, 0.5);
+  color: #fff;
+  /*box-shadow: 0 0 2px rgba(231, 76, 60, 0.5);  */
+  border: 1px solid #c71703;
+  background-color: #c71703;
+  /*text-shadow:0 0px 0 rgba(231, 76, 60, 0.5);*/
 }
 
 .result .fakeElement:hover{
-  color: rgba(231, 76, 60,1.0);
-  box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
-  border: 1px solid rgba(231, 76, 60, 0.25);
-  text-shadow:0 0px 0 rgba(231, 76, 60, 0.5);
+  color: #fff;
+  /*box-shadow: 0 0 10px rgba(231, 76, 60, 0.5); */
+  border: 1px solid #c71703;
+  background-color: #c71703;
+
+  /*text-shadow:0 0px 0 rgba(231, 76, 60, 0.5);*/
 }
 
 .main li:hover{
   transform:scale(2.5);
   z-index:100;
-  box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
-  background: #333;
+  box-shadow: 0 0 10px #337ab7;
+  background: #337ab7;
   opacity:1.0;
 }
 
 .main .selected:hover, .main .hovered, .result li:hover{
   transform:scale(2.5);
     z-index:100;
-    box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
-    background: #333;
+    box-shadow: 0 0 10px #006400;
+    background: #006400;
     opacity:1.0;
 }
 
@@ -175,11 +182,15 @@ margin:auto;
 }
 
 .text-center{
-  color:rgba(52, 152, 219,1.0);
+  color:#337ab7;
+}
+
+.text-foreground{
+  color:#337ab7;
 }
 
 .btn{
-   background: rgba(52, 152, 219,1.0);
+   background: #337ab7;
    border: 1px solid rgba(52, 152, 219, 0.25);
 }
 

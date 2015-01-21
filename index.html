@@ -8,21 +8,27 @@
     <meta name="author" content="srrm-lwn">
 
     <title>Periodic Names</title>
-
+    <style>
+        /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+        html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0};
+    </style>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="css/styles.css" rel="stylesheet">
 
 </head>
 
 <body>
+<div class="container-fluid">
 <div class="text-center">
     <h3>Find your name in the Periodic Table of Elements!</h3>
-    <h5>
+    <h4>
         <small>A hack by <a href="https://twitter.com/srrm_lwn" target="_blank">@srrm_lwn</a></small>
-    </h5>
+    </h4>
+</div>
 </div>
 
-<div class="wrapper">
+<div class="wrapper hidden-xs clearfix">
     <ul class="main">
         <li id="H" data-pos="1" data-nb="1.00">H<span>Hydrogen</span></li>
         <li class="empty"><span></span></li>
@@ -206,6 +212,7 @@
         <li id="Lr" data-pos="493" data-nb="(262)">Lr<span>Lawrencium</span></li>
     </ul>
 </div>
+<div class="container-fluid">
 <div class="inner cover centered">
     <div class="input-group">
         <input type="text"
@@ -226,10 +233,11 @@
     <ul id="result" class="main result">
     </ul>
 </div>
+</div>
 <br/>
 
 <div class="centered">
-    <h5 id="result_message" class="result" style="display:none"></h5>
+    <h5 id="result_message" class="result text-foreground" style="display:none"></h5>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type='text/javascript' src="js/periodicnames.js"></script>
