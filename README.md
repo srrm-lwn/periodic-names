@@ -1,2 +1,2 @@
-periodic-names
-==============
+http://www.periodicnames.com
+----------------------------
