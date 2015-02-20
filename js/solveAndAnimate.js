@@ -1,17 +1,17 @@
 var animSpeed = 250;
 var successMessage = "<span class=\"success\">Congratulations!</span><br/> Your name can be completely constructed from the Periodic Table of Elements!";
-var fakeMessage = "Uh oh, not all letters in your name can be found in the Periodic Table..<br/>but how about throwing some <span style=\"color: rgba(231, 76, 60,1.0);\">fake elements</span> in there?";
-
+var fakeMessage = "Not all letters in your name can be found in the Periodic Table..<br/>but how about throwing some <span style=\"color: rgba(231, 76, 60,1.0);\">fake elements</span> in there?";
 
 $(function () {
         function reset() {
             $(".main").children().removeClass("selected");
             $("#result").empty();
+            $("#twitter_share").addClass("hidden");
             $("#result_message").empty();
 
         }
 
-        function populateResult(output) {
+        function populateResult(input, output) {
             var $result = $("#result");
             if (typeof output == 'undefined') {
                 $result.html("FAILURE");
@@ -37,7 +37,7 @@ $(function () {
                         setTimeout(makeHoverOutFunction("#" + element, element, i, isFake), (2 * i + 1) * animSpeed);
                     }
                 }
-                setTimeout(makeAddResultMessageFunction(resultHasFake), (2 * output.length) * animSpeed);
+                setTimeout(makeAddResultMessageAndSocialFunction(input, resultHasFake), (2 * output.length) * animSpeed);
             }
         }
 
@@ -47,12 +47,27 @@ $(function () {
             }
         }
 
-        function makeAddResultMessageFunction(usesFake) {
+        function makeAddResultMessageAndSocialFunction(input, usesFake) {
             return function () {
-                $("#result_message").html(usesFake ? fakeMessage : successMessage).fadeIn("slow");
+                var $resultMessage = $("#result_message");
+                $resultMessage.removeClass("hidden");
+                $resultMessage.html(usesFake ? fakeMessage : successMessage).fadeIn("slow");
                 $("#go").prop("disabled", false);
-
+               enableSocialMediaSharing(input);
             };
+        }
+
+        function enableSocialMediaSharing(input) {
+            var $twitterShare = $("#twitter_share");
+            $twitterShare.removeClass("hidden").fadeIn("slow");
+            var uriEncoded = window.location.protocol + "//" + window.location.host + "/" + encodeURI(input);
+            $twitterShare.html('<a href="https://twitter.com/share"'
+            + ' class="twitter-share-button"'
+            + ' data-url="' + uriEncoded + '"'
+            + ' data-text="I just found my name in the Periodic Table!"'
+            + ' data-hashtags="periodicnames"'
+            + ' data-count="none">Tweet</a>');
+            twttr.widgets.load();
         }
 
         function makeAddSpaceFunction(i) {
@@ -143,14 +158,20 @@ $(function () {
             return outputWithFake;
         }
 
-        $("#go").click(function () {
+        function solveAndAnimate() {
             reset();
-            $(this).prop("disabled", true);
-            var inputValue = $("#name").val().toUpperCase().split("");
+            $("#go").prop("disabled", true);
+            var input = $("#name").val();
+            var inputValue = input.toUpperCase().split("");
             var output = findNameInPeriodicTable(inputValue);
             var outputWithFake = createWithFake(inputValue, output);
-            populateResult(outputWithFake);
-        });
+            populateResult(input, outputWithFake);
+        }
+
+        function makeSolveAndAnimateFunction() {
+            return function(){solveAndAnimate()};
+        }
+        $("#go").click(makeSolveAndAnimateFunction());
     }
 );
 

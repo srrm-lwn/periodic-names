@@ -10,7 +10,43 @@
     <title>Periodic Names</title>
     <style>
         /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
-        html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0};
+        html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+        address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b,
+        u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
+        th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output,
+        ruby, section, summary, time, mark, audio, video {
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        margin: 0;
+        padding: 0
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+        display: block
+        }
+
+        body {
+        line-height: 1
+        }
+
+        ol, ul {
+        list-style: none
+        }
+
+        blockquote, q {
+        quotes: none
+        }
+
+        blockquote:before, blockquote:after, q:before, q:after {
+        content: none
+        }
+
+        table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        }
     </style>
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -20,12 +56,12 @@
 
 <body>
 <div class="container-fluid">
-<div class="text-center">
-    <h3>Find your name in the Periodic Table of Elements!</h3>
-    <h4>
-        <small>A hack by <a href="https://twitter.com/srrm_lwn" target="_blank">@srrm_lwn</a></small>
-    </h4>
-</div>
+    <div class="text-center">
+        <h3>Find your name in the Periodic Table of Elements!</h3>
+        <h4>
+            <small>A hack by <a href="https://twitter.com/srrm_lwn" target="_blank">@srrm_lwn</a></small>
+        </h4>
+    </div>
 </div>
 
 <div class="wrapper hidden-xs clearfix">
@@ -213,43 +249,61 @@
     </ul>
 </div>
 <div class="container-fluid">
-<div class="inner cover centered">
-    <div class="input-group">
-        <input type="text"
-               placeholder="Enter your name"
-               id="name"
-               class="form-control"
-               autofocus
-               maxlength="20"
-               autocomplete="off"
-               onkeydown="if (event.keyCode == 13) document.getElementById('go').click()"
-               style="text-align: center;"/>
+    <div class="inner cover centered input-wrapper">
+        <div class="input-group">
+            <input type="text"
+                   placeholder="Enter your name"
+                   id="name"
+                   class="form-control clearable"
+                   autofocus
+                   maxlength="20"
+                   autocomplete="off"
+                   onkeydown="if (event.keyCode == 13) document.getElementById('go').click()"
+                   style="text-align: center;"
+                   value= "<?php echo urldecode($_GET['name']); ?>"
+
+                   />
                     <span class="input-group-btn">
                         <button id="go" class="btn btn-info" type="submit">Go!</button>
                     </span>
+        </div>
+    </div>
+    <div class="centered row">
+        <ul id="result" class="main result">
+        </ul>
+    </div>
+    <div class="centered row">
+        <h5 id="result_message" class="result text-foreground hidden"></h5>
+    </div>
+
+    <br/>
+    <br/>
+    <div class="centered row">
+        <div id="twitter_share" class="hidden">
+
+        </div>
     </div>
 </div>
-<div class="centered">
-    <ul id="result" class="main result">
-    </ul>
-</div>
-</div>
-<br/>
-
-<div class="centered">
-    <h5 id="result_message" class="result text-foreground" style="display:none"></h5>
-</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type='text/javascript' src="js/periodicnames.js"></script>
-<script type='text/javascript' src="js/solveAndAnimate.js"></script>
+<script src="http://platform.twitter.com/widgets.js"></script>
+<script type='application/javascript' src="js/periodicnames.js"></script>
+<script type='application/javascript' src="js/solveAndAnimate.js"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-58779238-1', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-58779238-1', 'auto');
+    ga('send', 'pageview');
+
 
 </script>
 </body>
